@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pomodoro_timer/views/home/home.dart';
+import 'package:pomodoro_timer/views/splash/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,14 +13,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Timer'),
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        initialRoute: '/',
+        routes: {
+          '/home': (context) => const MyHomePage(),
+        },
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const SplashScreen()
 
-      //const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
+        //const MyHomePage(title: 'Flutter Demo Home Page'),
+        );
   }
 }

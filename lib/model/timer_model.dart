@@ -1,11 +1,9 @@
 class TimerModel {
-  late int pomodoroCount;
-  late int minutes;
-  late int seconds;
+  static int pomodoroCount = 0;
+  static int minutes = 25;
+  static int seconds = 00;
+}
 
-  TimerModel({
-    required this.pomodoroCount,
-    required this.minutes,
-    required this.seconds,
-  });
+abstract class TimerExecutions {
+  timerExecutions();
 }
